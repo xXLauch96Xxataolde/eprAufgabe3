@@ -7,7 +7,8 @@ from math import sqrt, log, e  #an example
 #from numpy import array       #another example for third party module
 import random              #example for your own module 
 from player import Player
-import new_game
+import new_players
+import new_gameinstance
  
 __author__ = "123456: John Cleese, 654321: Terry Gilliam"  #put your data here
 __copyright__ = "Copyright 2017/2018 - EPR-Goethe-Uni" 
@@ -27,13 +28,15 @@ def menue():
 def sixteen_is_dead(players):
     menue()
     inp = input()
+    # while und so
     if (inp == "1"):
-        new_game.new_game(players)
-    elif (inp == 2):
+        new_players.new_players(players)
+        new_gameinstance.game_inst()
+    elif (inp == "2"):
         quick_game(players)
-    elif (inp == 3):
+    elif (inp == "3"):
         help()
-    elif (inp == 4):
+    elif (inp == "4"):
         conf_special()
     else:
         print("No valid Input. Please repeat")

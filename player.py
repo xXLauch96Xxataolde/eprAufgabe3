@@ -1,13 +1,12 @@
 class Player(object):
 
-    def __init__(self, name, id, score=0, dice_roll_counter=0):
+    def __init__(self, name, id, score=0):
         self.name = name
         self.score = score
-        self.dice_roll_counter = dice_roll_counter
         self.id = id
 
-    def pri(self):
-        print("New Obj", self.name)
+    def printer(self):
+        print("Name=",self.name,"Id=", self.id, "score=", self.score)
 
     def setscore(self, score):
         self.score += score
