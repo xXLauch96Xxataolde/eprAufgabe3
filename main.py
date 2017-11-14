@@ -30,7 +30,7 @@ def sixteen_is_dead(players):
     inp = input()
     # while und so
     if (inp == "1"):
-        new_players.new_players(players)
+        players = new_players.new_players(players)
         new_gameinstance.game_inst()
     elif (inp == "2"):
         quick_game(players)
