@@ -18,7 +18,7 @@ def roll_dice(number=1, faces=6, seed=None):
     return output
 
 
-def scorekeeper(score):
+def roll_dice_int_builder(score):
     score = score.replace(",", "")  # replaces all comma with nothing
     sum_score = 0
     for i in score:
@@ -44,7 +44,7 @@ def nicer_dicer_and_scorekeeper(player, inst):
     seed = inst[2]
     # animation()
     sum = 0
-    sum = scorekeeper(roll_dice(number, faces, seed))
+    sum = roll_dice_int_builder(roll_dice(number, faces, seed))
     print("Dice was:", sum)  
     return(sum)  
 
@@ -53,19 +53,16 @@ def state_check(sum, player, inst):
     number = inst[0]
     faces = inst[1]
     seed = inst[2]
-    print("ASDASDASDASDASD",sum)
     if (sum == 9):
         we_have_a_looser(player)
-        print("sdffffffffffffffffffffffffffffffffffffffff")
         return (-100)
     elif (sum == 10):
         print("Force dice role due to 10.")
-        sum += scorekeeper(roll_dice(number, faces, seed))
+        sum += roll_dice_int_builder(roll_dice(number, faces, seed))
         state_check(sum, player, inst)
         return(sum)
     elif (sum > 15):
         we_have_a_looser(player)
-        print("sdffffffffffffffffffffffffffffffffffffffff")
         return (-100)
     else:
         return sum
@@ -75,25 +72,38 @@ def start(inst, players):
     number = inst[0]
     faces = inst[1]
     seed = inst[2]
-    sum = 0
+    game_on = 1
+    possible_winners = []
     for player in players:
-        print("Player", player.name, "it's your turn. Press enter to gamble")
-        print("Press n to end your round")
-        while(True):
-            inp = input()
-            if (inp == ""):
-                sum += nicer_dicer_and_scorekeeper(player, inst)
-                print("Total score is:", sum)
-                a = state_check(sum, player, inst)                
-                if (a < 0):
-                    sum = 0
-                    print("STOOOOOOOOOOOOOOOOOOOOOOOPP")
-            elif (inp == "n"):
-                player.score = sum
-                sum = 0
-                break
-            else:
-                print("Unreadable. Again")
+        sum = 0
+        if (game_on == 1):
+            print("Player", player.name, 
+                  "it's your turn. Press enter to gamble")
+            print("Press n to end your round")
+            while(True):
+                inp = input()
+                if (inp == ""):
+                    sum += nicer_dicer_and_scorekeeper(player, inst)
+                    print("Total score is:", sum)
+                    a = state_check(sum, player, inst)                
+                    if (a < 0):
+                        game_on = 0
+                        break                
+                elif (inp == "n"):
+                    player.score = sum
+                    possible_winners.append(player)
+                    break
+                else:
+                    print("Unreadable. Again")
+        else:
+            print("The End - Buy our exclusive 79,99 Euro DLC")
+            break
     
-    for player in players:
-        print(player)
+    
+    if (len(possible_winners) > 0):  
+        winners = []
+        winners = sorted(possible_winners, key=lambda x: x.score)
+        print(winner[0].name, "you have the lowest points.")
+        we_have_a_looser(winner[0])
+    
+        
