@@ -23,7 +23,7 @@ def roll_dice(number=1, faces=6, seed=None):
 
 
 def scorekeeper(score):
-    score  = score.replace(",", "")  # replaces all comma with nothing
+    score = score.replace(",", "")  # replaces all comma with nothing
     sum_score = 0
     for i in score:
         sum_score += int(i)
