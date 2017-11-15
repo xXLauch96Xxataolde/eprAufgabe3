@@ -33,23 +33,29 @@ def animation():
         sys.stdout.write(animation[i % len(animation)])
         sys.stdout.flush()
 
+def givethisfunctionareasonablenameyoudumpwhorewhichmeansme(player, inst):
+    number = inst[0]
+    faces = inst[1]
+    seed = inst[2]
+    sum = 0
+    animation()
+    sum += roll_dice(number, faces, seed)  # this asshole only returns strings. fuck my life
+    return sum
+    
 
 def start(inst, players):
     number = inst[0]
     faces = inst[1]
     seed = inst[2]
+    sum = 0
     for player in players:
-        sum = 0
         print("Player", player.name, "it's your turn. Press enter to gamble")
         print("Press n to end your round")
         while(True):
             inp = input()
             if (inp == ""):
-                animation()
-                score = roll_dice(number, faces, seed)
-                sum += scorekeeper(score)
-                print("sum", sum)
-                
+                sum = givethisfunctionareasonablenameyoudumpwhorewhichmeansme(player,inst)
+                print(sum)
             elif (inp == "n"):
                 break
             else:
