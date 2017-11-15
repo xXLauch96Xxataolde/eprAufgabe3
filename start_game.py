@@ -100,10 +100,10 @@ def start(inst, players):
             break
     
     
-    if (len(possible_winners) > 0):  
+    if (len(possible_winners) > 0 and game_on == 1):  
         winners = []
         winners = sorted(possible_winners, key=lambda x: x.score)
-        print(winner[0].name, "you have the lowest points.")
-        we_have_a_looser(winner[0])
+        print(winners[0].name, "you have the lowest points.")
+        we_have_a_looser(winners[0])
     
         
