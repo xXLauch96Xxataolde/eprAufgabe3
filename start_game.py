@@ -42,28 +42,33 @@ def nicer_dicer_and_scorekeeper(player, inst):
     number = inst[0]
     faces = inst[1]
     seed = inst[2]
-    animation()
+    # animation()
     sum = 0
     sum = scorekeeper(roll_dice(number, faces, seed))
     print("Dice was:", sum)  
     return(sum)  
 
 
-def state_check(sum, player):
+def state_check(sum, player, inst):
+    number = inst[0]
+    faces = inst[1]
+    seed = inst[2]
+    print("ASDASDASDASDASD",sum)
     if (sum == 9):
         we_have_a_looser(player)
-        sum = -1
-        return (sum)
+        print("sdffffffffffffffffffffffffffffffffffffffff")
+        return (-100)
     elif (sum == 10):
         print("Force dice role due to 10.")
         sum += scorekeeper(roll_dice(number, faces, seed))
-        state_check(sum)
-        retrn(sum)
-    elif (sum == 16):
+        state_check(sum, player, inst)
+        return(sum)
+    elif (sum > 15):
         we_have_a_looser(player)
-        sum = -1
-        return (sum)
-    return sum
+        print("sdffffffffffffffffffffffffffffffffffffffff")
+        return (-100)
+    else:
+        return sum
    
 
 def start(inst, players):
@@ -78,10 +83,11 @@ def start(inst, players):
             inp = input()
             if (inp == ""):
                 sum += nicer_dicer_and_scorekeeper(player, inst)
-                print(sum)
-                state_check(sum, player)                
-                if (sum == -1):
-                    break
+                print("Total score is:", sum)
+                a = state_check(sum, player, inst)                
+                if (a < 0):
+                    sum = 0
+                    print("STOOOOOOOOOOOOOOOOOOOOOOOPP")
             elif (inp == "n"):
                 player.score = sum
                 sum = 0
