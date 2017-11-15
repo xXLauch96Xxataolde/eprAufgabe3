@@ -39,12 +39,15 @@ def game_inst():
 				break
 			except (ValueError, IndexError):
 				print("Unreadable")
-	elif(inp == "x"):
+	elif(inp == "n"):
 		print("Ok. 1 dice, 6 faces. No seed")
 		number = 1
 		faces = 6
-		seed = none
+		seed = None
 		return(number, faces, seed)
 	else:
-		print("You must be wasted. Standard Game for 2 <3")
-	print("number", number, "faces", faces, "seed", seed)
+		print("You must be wasted. Standard Game for you <3")
+		number = 1
+		faces = 6
+		seed = None
+		return(number, faces, seed)

@@ -9,6 +9,7 @@ import random              #example for your own module
 from player import Player
 import new_players
 import new_gameinstance
+import start_game
  
 __author__ = "123456: John Cleese, 654321: Terry Gilliam"  #put your data here
 __copyright__ = "Copyright 2017/2018 - EPR-Goethe-Uni" 
@@ -31,7 +32,8 @@ def sixteen_is_dead(players):
     # while und so
     if (inp == "1"):
         players = new_players.new_players(players)
-        new_gameinstance.game_inst()
+        inst = new_gameinstance.game_inst()
+        start_game.start(inst, players)
     elif (inp == "2"):
         quick_game(players)
     elif (inp == "3"):
