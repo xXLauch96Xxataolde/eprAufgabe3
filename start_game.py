@@ -12,12 +12,8 @@ def roll_dice(number=1, faces=6, seed=None):
         random.seed(seed)
         score.append(random.randint(1, faces))
     
-    if (len(score) == 1):
-        output = score[0]
-        return output
-    else:
-        for j in score:
-            output = output + str(j) + ","
+    for j in score:
+        output = output + str(j) + ","
     
     return output
 
