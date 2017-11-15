@@ -33,15 +33,38 @@ def animation():
         sys.stdout.write(animation[i % len(animation)])
         sys.stdout.flush()
 
-def givethisfunctionareasonablenameyoudumpwhorewhichmeansme(player, inst):
+
+def we_have_a_looser(player):
+    print(player.name, "Congrats, you are a Looser. Go buy your mates a drink") 
+
+
+def nicer_dicer_and_scorekeeper(player, inst):
     number = inst[0]
     faces = inst[1]
     seed = inst[2]
-    sum = 0
     animation()
-    sum += roll_dice(number, faces, seed)  # this asshole only returns strings. fuck my life
+    sum = 0
+    sum = scorekeeper(roll_dice(number, faces, seed))
+    print("Dice was:", sum)  
+    return(sum)  
+
+
+def state_check(sum, player):
+    if (sum == 9):
+        we_have_a_looser(player)
+        sum = -1
+        return (sum)
+    elif (sum == 10):
+        print("Force dice role due to 10.")
+        sum += scorekeeper(roll_dice(number, faces, seed))
+        state_check(sum)
+        retrn(sum)
+    elif (sum == 16):
+        we_have_a_looser(player)
+        sum = -1
+        return (sum)
     return sum
-    
+   
 
 def start(inst, players):
     number = inst[0]
@@ -54,9 +77,17 @@ def start(inst, players):
         while(True):
             inp = input()
             if (inp == ""):
-                sum = givethisfunctionareasonablenameyoudumpwhorewhichmeansme(player,inst)
+                sum += nicer_dicer_and_scorekeeper(player, inst)
                 print(sum)
+                state_check(sum, player)                
+                if (sum == -1):
+                    break
             elif (inp == "n"):
+                player.score = sum
+                sum = 0
                 break
             else:
                 print("Unreadable. Again")
+    
+    for player in players:
+        print(player)
