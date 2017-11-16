@@ -4,7 +4,7 @@ What my great code misses:
 - es muss jeder jede codezeile kenne
 - roll_cheating_dice
 ok complete game loop, to only exit with exit method
-- whats with the 3 seconds thing
+ok whats with the 3 seconds thing
 - what about test cases
 ok overhauled menue
 - maybe patch the prints and outputs, to funny???
@@ -29,18 +29,3 @@ ok overhauled menue
 	so das machen auch mit leerzeichen
 	
 	"""
-- Hardware 2 empfiehlt Bilal im 2. Semester
-- Hardware Praktikum  7/12 Punkte  nur im Sommerster
-- Wahlmodule unterscheiden sich nach Sommer und Winterse
-- Vertiefungsmodule 43 CP in 2 von 8 CP und 1 16 CP
-- 24 Anwendungsfach
-- Basismodule
-- 3 CP Obermudle
-- 12 CP Bachelorarbeit
-- Vertiefsungsmodul: Datenbanken 1 cooler Prof
-- PRG 2 SQL und Haskell
-- Anwendungsfach 
-- Carsten Tolle
-- Mathe 3 extrem schwer
-- GL1 - 10CP 
-- Trololo
