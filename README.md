@@ -9,3 +9,6 @@ What my great code misses:
 - overhauled menue
 - maybe patch the prints and outputs, to funny???
 - the coder needs some sleep
+- in configure your game thing: ask if seed is wanted
+- place docstrings and comments everywhere in the code
+- write the help method
