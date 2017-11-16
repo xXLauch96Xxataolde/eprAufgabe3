@@ -14,3 +14,17 @@ ok overhauled menue
 - work on the header
 - optimate dice = 9. fuck
 - force dice_roll after 3 seconds
+- jedes Modul mit header
+- pakete auch klein schreiben
+- if cheat is enterd cheat
+- jede methode beginnt mit docstring
+- schaue konventionen an
+- prozeduren mit camel case
+- leerzeilen zwischen def func() und dem restlichen code mist, wenn es kein docstring ist
+- def func():
+	"""
+	
+	bei mehrzeiligen Docstrings 
+	so das machen auch mit leerzeichen
+	
+	"""

@@ -56,8 +56,6 @@ def sixteen_is_dead(players):
             inp = input()
             
     
-  # def role_Cheating_dice():
-
 def main():
     players = []
     sixteen_is_dead(players)

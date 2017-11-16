@@ -3,6 +3,7 @@ from player import Player
 
 
 def game_inst():
+
 	number = 0
 	faces = 0
 	seed = 0.0
