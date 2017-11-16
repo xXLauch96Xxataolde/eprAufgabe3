@@ -11,4 +11,4 @@ What my great code misses:
 - the coder needs some sleep
 - in configure your game thing: ask if seed is wanted
 - place docstrings and comments everywhere in the code
-- write the help method
+- write the help method, maybe per input txt
