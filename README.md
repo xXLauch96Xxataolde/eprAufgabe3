@@ -1,6 +1,7 @@
 # eprAufgabe3
 
 What my great code misses:
+- es muss jeder jede codezeile kenne
 - roll_cheating_dice
 ok complete game loop, to only exit with exit method
 - whats with the 3 seconds thing
