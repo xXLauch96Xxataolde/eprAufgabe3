@@ -22,8 +22,7 @@ def game_inst():
                     continue
 
                 print("How many faces per Dice? Faces between 2 and 100.")
-                inp = input()
-                inp = int(inp)
+                inp = int(input())
                 if (1 < inp and inp < 101):
                     print("Great")
                     faces = inp
@@ -32,8 +31,7 @@ def game_inst():
                     continue
 
                 print("Which seed for pseudo random? Float expected")
-                inp = input()
-                inp = float(inp)
+                inp = float(input())
                 seed = inp
                 return (number, faces, seed)
                 break

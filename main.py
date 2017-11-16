@@ -34,7 +34,7 @@ def menue():
 def sixteen_is_dead(players):
     while (True):
         menue()
-        inp = input()
+        inp = str(input())
         if (inp == "1"):
             players = new_players.new_players(players)
             inst = new_gameinstance.game_inst()
@@ -50,10 +50,10 @@ def sixteen_is_dead(players):
             conf_special()
         elif (inp == "5"):
             print("Play again soon. Buy our PC exclusive DLC for 79,99 Euro")
-            break;
+            break
         else:
             print("No valid Input. Please repeat")
-            inp = input()
+
             
     
   # def role_Cheating_dice():
@@ -65,4 +65,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
