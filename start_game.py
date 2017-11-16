@@ -69,11 +69,11 @@ def nicer_dicer_and_scorekeeper(player, inst):
 def seconds_rule():
     print("Force dice role due to 10.")
     print("3")
-    time.wait(1000)
+    time.sleep(1)
     print("2")
-    time.wait(1000)
+    time.sleep(1)
     print("1")
-    time.wait(1000)
+    time.sleep(1)
     
 
 def state_check(sum, player, inst):
@@ -114,14 +114,16 @@ def start(inst, players):
                 if (inp == ""):
                     sum += nicer_dicer_and_scorekeeper(player, inst)
                     print("Total score is:", sum)
-                    a = state_check(sum, player, inst)                
+                    a = state_check(sum, player, inst)  
+                    continue
                     if (a < 0):
                         game_on = 0
                         break
                 if (inp == "cheat"):
                     sum += nicer_dicer_and_scorekeeper(player, cheating_inst)
                     print("Total score is:", sum)
-                    a = state_check(sum, player, inst)                
+                    a = state_check(sum, player, inst)
+                    continue                
                     if (a < 0):
                         game_on = 0
                         break                
@@ -130,9 +132,11 @@ def start(inst, players):
                     possible_winners.append(player)
                     break
                 else:
+                    # the code doesnt delete inp the way i want it,
+                    # so as the loop continues, else is called
                     print("Unreadable. Again press <enter> or <n>.")
         else:
-            print("The End - Buy our exclusive 79,99 Euro DLC")
+            print("The End - Buy our exclusive 79,99 Euro DLC \n*3")
             break
     
     if (len(possible_winners) > 0 and game_on == 1):  
