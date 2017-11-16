@@ -20,12 +20,12 @@ __email__ = "your email address"
 
   
 def menue():
-    print("...................Menue........::.......")
+    print("...................Menue.................")
     print(".........................................")
     print(".1..New Game.............................")
-    print(".2..Quick Game 2 Play0rs.................")
+    print(".2..Quick Game 2 Players.................")
     print(".3..Help.................................")
-    print(".4..Configure your special/Cheting Dice..")
+    print(".4..Configure your special/Cheating Dice.")
     print(".5..Exit.................................")
     print(".........................................")
     print(".........................................")
