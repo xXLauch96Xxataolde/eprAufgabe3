@@ -35,7 +35,7 @@ def animation():
 
 
 def we_have_a_looser(player):
-    print(player.name, "Congrats, you are a Looser. Go buy your mates a drink") 
+    print(player.name, "Congrats, you are a Looser :) Go buy your mates a drink") 
 
 
 def nicer_dicer_and_scorekeeper(player, inst):

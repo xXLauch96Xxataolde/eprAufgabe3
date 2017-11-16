@@ -20,33 +20,41 @@ __email__ = "your email address"
 
   
 def menue():
-    print("...........Welcome...........")
-    print(".1..New Game.................")
-    print(".2..Quick Game 2 Play0rs.....")
-    print(".3..Help.....................")
-    print(".4..Configure your special/Cheting Dice")
-    print(".............................")
-    print(".............................")
+    print("...................Menue........::.......")
+    print(".........................................")
+    print(".1..New Game.............................")
+    print(".2..Quick Game 2 Play0rs.................")
+    print(".3..Help.................................")
+    print(".4..Configure your special/Cheting Dice..")
+    print(".5..Exit.................................")
+    print(".........................................")
+    print(".........................................")
 
 
 def sixteen_is_dead(players):
-    menue()
-    inp = input()
-    # while und so
-    if (inp == "1"):
-        players = new_players.new_players(players)
-        inst = new_gameinstance.game_inst()
-        start_game.start(inst, players)
-    elif (inp == "2"):
-        players = quick_game.std_player()
-        inst = quick_game.std_dice()
-        start_game.start(inst, players)
-    elif (inp == "3"):
-        help()
-    elif (inp == "4"):
-        conf_special()
-    else:
-        print("No valid Input. Please repeat")
+    while (True):
+        menue()
+        inp = input()
+        if (inp == "1"):
+            players = new_players.new_players(players)
+            inst = new_gameinstance.game_inst()
+            start_game.start(inst, players)
+        elif (inp == "2"):
+            # print("category choosen" insert
+           players = quick_game.std_player()
+           inst = quick_game.std_dice()
+           start_game.start(inst, players)
+        elif (inp == "3"):
+            help()
+        elif (inp == "4"):
+            conf_special()
+        elif (inp == "5"):
+            print("Play again soon. Buy our PC exclusive DLC for 79,99 Euro")
+            break;
+        else:
+            print("No valid Input. Please repeat")
+            inp = input()
+            
     
   # def role_Cheating_dice():
 
