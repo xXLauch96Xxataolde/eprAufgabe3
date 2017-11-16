@@ -22,7 +22,6 @@ def new_players(players):
         print("Please enter a Name for Player", i)
         while True:
             name_inp = input()
-            print("Name : ", name_inp)
             if name_inp != "" and name_inp != " ":
                 name = name_inp
                 players.append(Player(name, score=0, id=i))
