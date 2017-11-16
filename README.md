@@ -12,3 +12,6 @@ What my great code misses:
 - in configure your game thing: ask if seed is wanted
 - place docstrings and comments everywhere in the code
 - write the help method, maybe per input txt
+- work on the header
+- optimate dice = 9. fuck
+- force dice_roll after 3 seconds
