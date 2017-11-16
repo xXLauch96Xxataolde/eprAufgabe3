@@ -28,14 +28,15 @@ def roll_dice_int_builder(score):
     
 def animation():
     animation = "."
-    for i in range(30):
+    for i in range(20):
         time.sleep(0.1)
         sys.stdout.write(animation[i % len(animation)])
         sys.stdout.flush()
 
 
 def we_have_a_looser(player):
-    print(player.name, "Congrats, you are a Looser :) Go buy your mates a drink") 
+    print(player.name, "Congrats, you are a Looser :) Go buy your mates a drink.", "\n")
+    #do you wish to play again func?
 
 
 def nicer_dicer_and_scorekeeper(player, inst):
@@ -79,8 +80,8 @@ def start(inst, players):
         sum = 0
         if (game_on == 1):
             print(player.name, 
-                  "it's your turn. Press enter to gamble")
-            print("Press n to end your round")
+                  "it's your turn. Press <enter> to gamble")
+            print("Press <n> to end your round.")
             while(True):
                 inp = input()
                 if (inp == ""):
@@ -95,7 +96,7 @@ def start(inst, players):
                     possible_winners.append(player)
                     break
                 else:
-                    print("Unreadable. Again")
+                    print("Unreadable. Again press <enter> or <n>.")
         else:
             print("The End - Buy our exclusive 79,99 Euro DLC")
             break

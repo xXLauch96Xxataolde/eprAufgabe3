@@ -19,10 +19,10 @@ def new_players(players):
             print("No valid Input. Please repeat")
     
     for i in range(inp):
-        print("Please enter a Name for Player", i)
+        print("Please enter a Name for Player", i + 1)
         while True:
             name_inp = input()
-            print("Name : ", name_inp)
+            name_inp = str(name_inp)
             if name_inp != "" and name_inp != " ":
                 name = name_inp
                 players.append(Player(name, score=0, id=i))
