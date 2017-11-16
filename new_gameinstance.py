@@ -14,14 +14,14 @@ def game_inst():
 			inp = input()
 			try:
 				inp = int(inp)
-				if (0 < inp and inp < 10):
+				if (0 < inp and inp < 11):
 					print("Great")
 					number = inp
 				else:
 					print("Too many dices. Repeat")
 					continue
 					
-				print("How many faces per Dice. Min 1")
+				print("How many faces per Dice? Faces between 2 and 100.")
 				inp = input()
 				inp = int(inp)
 				if (1 < inp and inp < 101):
