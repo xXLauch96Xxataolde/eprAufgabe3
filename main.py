@@ -49,8 +49,6 @@ def sixteen_is_dead(players):
         print("No valid Input. Please repeat")
     
   # def role_Cheating_dice():
-  # def role_dice(number=1, faces=6, seed=None):
-
 
 def main():
     players = []
