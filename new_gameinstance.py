@@ -29,11 +29,16 @@ def game_inst():
                 else:
                     print("Too many faces. Repeat")
                     continue
-
-                print("Which seed for pseudo random? Float expected")
-                inp = float(input())
-                seed = inp
-                return (number, faces, seed)
+                print("Do you want a seed? (y/n)")
+                inp = input()
+                if (inp =="y"):
+                    print("Which seed for pseudo random? Float expected")
+                    inp = float(input())
+                    seed = inp
+                    return (number, faces, seed)
+                else:
+                    print("Standard Seed=None it is")
+                    return (number, faces, None)
                 break
             except (ValueError, IndexError):
                 print("Unreadable")

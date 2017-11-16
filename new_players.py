@@ -1,7 +1,7 @@
 from player import Player
 
 
-def new_players(players):
+def new_players(players):  # good job
     print("Category chosen: New Game")    
     while (True):
         print("Please enter the number of participants")
@@ -21,11 +21,10 @@ def new_players(players):
     for i in range(inp):
         print("Please enter a Name for Player", i + 1)
         while True:
-            name_inp = input()
-            name_inp = str(name_inp)
-            if name_inp != "" and name_inp != " ":
-                name = name_inp
-                players.append(Player(name, score=0, id=i))
+            inp = input()
+            inp.strip()
+            if (inp != ""): #there was a more elegant way
+                players.append(Player(inp, score=0, id=i))
                 break
             else:
                 print("You didn't type anything! Try again.")
