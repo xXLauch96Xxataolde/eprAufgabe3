@@ -1,6 +1,7 @@
 import main
-from players import Players
-import game_instance
+from player import Player
+import new_gameinstance
+import random
 
 
 def std_player():
@@ -14,7 +15,7 @@ def std_player():
 
     
 def std_dice():
-    return(roll_dice(number=1, faces=6, seed=None))
+    return(1, 6, None)
 
     
 def roll_dice(number=1, faces=6, seed=None):

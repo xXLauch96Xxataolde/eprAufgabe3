@@ -59,6 +59,7 @@ def state_check(sum, player, inst):
     elif (sum == 10):
         print("Force dice role due to 10.")
         sum += roll_dice_int_builder(roll_dice(number, faces, seed))
+        print("Total score is:", sum)
         state_check(sum, player, inst)
         return(sum)
     elif (sum > 15):
@@ -77,7 +78,7 @@ def start(inst, players):
     for player in players:
         sum = 0
         if (game_on == 1):
-            print("Player", player.name, 
+            print(player.name, 
                   "it's your turn. Press enter to gamble")
             print("Press n to end your round")
             while(True):
