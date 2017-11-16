@@ -5,7 +5,7 @@ What my great code misses:
 ok complete game loop, to only exit with exit method
 - whats with the 3 seconds thing
 - what about test cases
-- overhauled menue
+ok overhauled menue
 - maybe patch the prints and outputs, to funny???
 - the coder needs some sleep
 - in configure your game thing: ask if seed is wanted

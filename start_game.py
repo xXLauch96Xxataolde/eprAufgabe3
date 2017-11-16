@@ -42,7 +42,7 @@ def nicer_dicer_and_scorekeeper(player, inst):
     number = inst[0]
     faces = inst[1]
     seed = inst[2]
-    # animation()
+    animation()
     sum = 0
     sum = roll_dice_int_builder(roll_dice(number, faces, seed))
     print("Dice was:", sum)  
