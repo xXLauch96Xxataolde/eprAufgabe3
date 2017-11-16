@@ -43,3 +43,4 @@ ok overhauled menue
 - Carsten Tolle
 - Mathe 3 extrem schwer
 - GL1 - 10CP 
+- Trololo
