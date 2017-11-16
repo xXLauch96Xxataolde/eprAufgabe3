@@ -37,7 +37,7 @@ def sixteen_is_dead(players):
         inst = new_gameinstance.game_inst()
         start_game.start(inst, players)
     elif (inp == "2"):
-        quick_game(players)
+        quick_game()
     elif (inp == "3"):
         help()
     elif (inp == "4"):
