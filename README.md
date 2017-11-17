@@ -28,3 +28,4 @@ ok if cheat is enterd cheat
 	so das machen auch mit leerzeichen
 	
 	"""
+- need to implement exit in game and restart
