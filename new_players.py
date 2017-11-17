@@ -23,7 +23,7 @@ def new_players(players):  # good job
         print("Please enter a Name for Player", i + 1)
         while True:
             inp = input()
-            inp.strip()
+            inp = inp.strip()
             if (inp != ""): #there was a more elegant way
                 players.append(Player(inp, score=0, id=i))
                 break
