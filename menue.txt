@@ -1,17 +1,30 @@
 Greetings kind User,
 
-at first let us thank you for testing our little game. We hope it brings joy to you and you mates. 
-Our programm offers a variety of possibilities to determine who is the next to buy a round of your fav drink.
+at first let us thank you for testing our little game. We hope it brings joy to 
+you and you mates. Our programm offers a variety of possibilities to determine 
+who is the next to buy a round of your fav drink.
 
 In the menue you have the overview of most of the game modes we offer. 
-1. Starts a game of your choice. You have all the possibilities to configure the number of dices, the faces per dice or the seed, if you want to test our game or just mess with the algorithm
+1. Starts a game of your choice. You have all the possibilities to configure 
+the number of dices, the faces per dice or the seed, if you want to test our 
+game or just mess with the algorithm
 
-2. Here you have the quick game option for you and your best mate. This is just a standard game, with one dice, with 6 faces and a standard seed for the random method. Due to the standard seed, the random method operates per system time. 
+2. Here you have the quick game option for you and your best mate. This is just 
+a standard game, with one dice, with 6 faces and a standard seed for the random 
+method. Due to the standard seed, the random method operates per system time. 
 
 3. Offers you help and a little detail about the game and its configurations. 
 
-4. Exit. Astonishingly the exit point exits the programm. Sadly, but everything ends even this masterpiece of fine coding.
+4. Exit. Astonishingly the exit point exits the programm. Sadly, but everything 
+ends even this masterpiece of fine coding.
 
-Lets dive into the mechanics during a game. There is just a littler difference whether you play in New Game or Quick Game. 
-In New Game, after you chose the number of mates you want to play with you can enter a dedicated name for them. You are allowed every word, but it has to be at least one char. Further it is totally possible to have two of your mates with the same name. Internally the datastructure allows a discrete distinction between the players with the help of an unique id. In New Game now you can decide if there should be anything special inside the game, like special dices or seed, as mentioned above. 
+Lets dive into the mechanics during a game. There is just a littler difference 
+whether you play in New Game or Quick Game. 
+In New Game, after you chose the number of mates you want to play with you can 
+enter a dedicated name for them. You are allowed every word, but it has to be 
+at least one char. Further it is totally possible to have two of your mates 
+with the same name. Internally the datastructure allows a discrete distinction 
+between the players with the help of an unique id. In New Game now you can 
+decide if there should be anything special inside the game, like special dices 
+or seed, as mentioned above. 
 
