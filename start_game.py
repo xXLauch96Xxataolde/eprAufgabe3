@@ -155,8 +155,8 @@ def start(inst, players):
             break
     
     if (len(possible_winners) > 0 and game_on == 1):
-        print(possible_winners[0])
-        print(possible_winners[1])
+        print(possible_winners[0].printer())
+        print(possible_winners[1].printer())
         winners = []
         winners = sorted(possible_winners, key=lambda x: x.score)
         print(winners[0].name, "you have the lowest points.")
