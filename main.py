@@ -1,11 +1,9 @@
-"""Docstring: A very short sentence explaining the function. < 79 characters. 
+"""Main or Core Function 
 
-Additional information if required and more infos. Complete sentences please.
+This function handles the whole program
 """
 
-from math import sqrt, log, e  # an example 
-# from numpy import array       #another example for third party module
-import random  # example for your own module 
+import random
 from player import Player
 import new_players
 import new_gameinstance
@@ -14,14 +12,14 @@ import quick_game
 import time
 import help_menue
 
-__author__ = "123456: John Cleese, 654321: Terry Gilliam"  # put your data here
+__author__ = "6770541: Niels Heissel, 6785468: Robert am Wege"
 __copyright__ = "Copyright 2017/2018 - EPR-Goethe-Uni" 
-__credits__ = "If you would like to thank somebody \
-              i.e. an other student for her code or leave it out" 
-__email__ = "your email address" 
+__credits__ = "" 
+__email__ = "uni.goethe.horde@gmail.com" 
 
   
 def menue():
+    """Just a small procedure for printing a overview of game funcs."""
     print(".................Menu....................")
     print(".........................................")
     print(".1..New Game.............................")
@@ -32,6 +30,17 @@ def menue():
 
 
 def sixteen_is_dead(players):
+    """Game Algorithm. 
+    
+    As mentioned in the description of the exercise, this is the key part of
+    he whole game. Due to more readable of this function, a lot of help 
+    functions and procedures are outsourced. 
+    players = new_players.new_players(players) this calls a new module and 
+    saves the new players as objects in a list. 
+    inst = new_gameinstance.game_inst() this establishes a new game instances 
+    with configured dices, faces of dices, and seeds. 
+    start_game.start(inst, players) start the game
+    """
     while (True):
         print("Going back to menu...")
         time.sleep(0.5)
@@ -59,6 +68,7 @@ def sixteen_is_dead(players):
             
     
 def main():
+    """Starts everything."""
     players = []
     sixteen_is_dead(players)
 
