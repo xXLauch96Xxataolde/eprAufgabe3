@@ -6,8 +6,8 @@ import random
 
 def std_player():
     players = []
-    p1 = Player("Player 0", score=0, id=0)
-    p2 = Player("Player 1", score=0, id=1)
+    p1 = Player("Player 1", score=0, id=0)
+    p2 = Player("Player 2", score=0, id=1)
     players.append(p1)
     players.append(p2)
     
