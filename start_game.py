@@ -59,7 +59,7 @@ def nicer_dicer_and_scorekeeper(player, inst):
         number = inst[0]
         faces = inst[1]
         seed = inst[2]
-        animation()
+        #animation()
         sum = 0
         sum = roll_dice_int_builder(roll_dice(number, faces, seed))
         print("Dice was:", sum)  
@@ -81,19 +81,20 @@ def state_check(sum, player, inst):
     faces = inst[1]
     seed = inst[2]
     if (sum == 9):
-        we_have_a_looser(player)
-        return (-100)
+        return (9)
     elif (sum == 10):
         seconds_rule()
         sum += roll_dice_int_builder(roll_dice(number, faces, seed))
         print("Total score is:", sum)
         state_check(sum, player, inst)
-        return(sum)
+        #return(sum)
     elif (sum > 15):
         we_have_a_looser(player)
         return (-100)
     else:
+        print(sum)
         return sum
+
    
 
 def start(inst, players):
@@ -114,19 +115,33 @@ def start(inst, players):
                 if (inp == ""):
                     sum += nicer_dicer_and_scorekeeper(player, inst)
                     print("Total score is:", sum)
-                    a = state_check(sum, player, inst)  
-                    continue
-                    if (a < 0):
-                        game_on = 0
+                    a = state_check(sum, player, inst)
+                    if (a == 9):
+                        player.score = sum
+                        possible_winners.append(player)
                         break
+                    elif (a == -100):
+                        game_on = 0
+                        player.score = sum
+                        possible_winners.append(player)
+                        break
+                    sum = a
+                    continue
                 if (inp == "cheat"):
                     sum += nicer_dicer_and_scorekeeper(player, cheating_inst)
                     print("Total score is:", sum)
                     a = state_check(sum, player, inst)
-                    continue                
-                    if (a < 0):
+                    if (a == 9):
+                        player.score = sum
+                        possible_winners.append(player)
+                        break
+                    elif (a == -100):
                         game_on = 0
-                        break                
+                        player.score = sum
+                        possible_winners.append(player)
+                        break
+                    sum = a
+                    continue
                 elif (inp == "n"):
                     player.score = sum
                     possible_winners.append(player)
