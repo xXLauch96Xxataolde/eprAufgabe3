@@ -53,7 +53,6 @@ def sixteen_is_dead(players):
             break;
         else:
             print("No valid Input. Please repeat")
-            inp = input()
             
     
 def main():
