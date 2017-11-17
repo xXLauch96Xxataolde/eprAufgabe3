@@ -2,6 +2,7 @@ from player import Player
 
 
 def new_players(players):  # good job
+    #players = []
     print("Category chosen: New Game")    
     while (True):
         print("Please enter the number of participants")
