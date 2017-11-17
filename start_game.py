@@ -47,7 +47,7 @@ def animation():
 
 def we_have_a_looser(div):
     
-    print(div, "congrats, you have the lowest points :) Go buy your mates a drink. \n")
+    print(div, "congrats, you have the lowest points :) Go buy your mates a drink.", "\n" * 3)
     # do you wish to play again func?
 
 
