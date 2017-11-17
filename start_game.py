@@ -47,7 +47,8 @@ def animation():
 
 def we_have_a_looser(div):
     
-    print(div, "congrats, you have the lowest points :) Go buy your mates a drink.", "\n" * 3)
+    print(div + "congrats, you have the lowest points :) Go buy your mates a drink.", "\n" * 3)
+    time.sleep(3)
     # do you wish to play again func?
 
 
@@ -89,7 +90,7 @@ def state_check(sum, player, inst):
         state_check(sum, player, inst)
         return(sum)
     elif (sum > 15):
-        we_have_a_looser(player)
+        we_have_a_looser(player.name)
         return (-100)
     else:
         print(sum)
@@ -126,7 +127,7 @@ def start(inst, players):
                         possible_winners.append(player)
                         break
                     continue
-                if (inp == "cheat"):
+                elif (inp == "cheat"):
                     sum += nicer_dicer_and_scorekeeper(player, cheating_inst)
                     print("Total score is:", sum)
                     a = state_check(sum, player, inst)
@@ -145,12 +146,22 @@ def start(inst, players):
                     player.score = sum
                     possible_winners.append(player)
                     break
+                elif (inp == "exit"):
+                    print("Exiting game...")
+                    game_on = 0
+                    possible_winners = []
+                    break
+                elif (inp == "restart"):
+                    print("Restarting game...")
+                    possible_winners = []
+                    start(inst, players)
+                    break
                 else:
                     # the code doesnt delete inp the way i want it,
                     # so as the loop continues, else is called
                     print("Unreadable. Again press <enter> or <n>.")
         else:
-            print("The End - Buy our exclusive 79,99 Euro DLC \n*3")
+            print("The End - Buy our exclusive 79,99 Euro DLC \n")
             break
     
     if (len(possible_winners) > 0 and game_on == 1):
@@ -164,7 +175,6 @@ def start(inst, players):
         
         div = ""
         for looser in loosers:
-            div += looser.name + ","
+            div += looser.name + ", "
         
         we_have_a_looser(div)
-        
