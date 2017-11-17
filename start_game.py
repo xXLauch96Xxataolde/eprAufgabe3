@@ -87,7 +87,7 @@ def state_check(sum, player, inst):
         sum += roll_dice_int_builder(roll_dice(number, faces, seed))
         print("Total score is:", sum)
         state_check(sum, player, inst)
-        #return(sum)
+        return(sum)
     elif (sum > 15):
         we_have_a_looser(player)
         return (-100)
