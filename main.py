@@ -22,7 +22,7 @@ __email__ = "your email address"
 
   
 def menue():
-    print("...................Menue.................")
+    print(".................Menu....................")
     print(".........................................")
     print(".1..New Game.............................")
     print(".2..Quick Game 2 Players.................")
@@ -35,7 +35,7 @@ def sixteen_is_dead(players):
     while (True):
         print("Going back to menu...")
         time.sleep(0.5)
-        print("\n"*100)
+        print("\n"*50)
         time.sleep(0.5);
         menue()
         inp = input()
