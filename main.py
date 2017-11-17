@@ -11,6 +11,8 @@ import new_players
 import new_gameinstance
 import start_game
 import quick_game
+import time
+import os
  
 __author__ = "123456: John Cleese, 654321: Terry Gilliam"  # put your data here
 __copyright__ = "Copyright 2017/2018 - EPR-Goethe-Uni" 
@@ -33,6 +35,11 @@ def menue():
 
 def sixteen_is_dead(players):
     while (True):
+        time.sleep(2.5)
+        print("Going back to menu...")
+        time.sleep(0.5)
+        print("\n"*100)
+        time.sleep(0.5);
         menue()
         inp = input()
         if (inp == "1"):
