@@ -45,9 +45,9 @@ def animation():
         sys.stdout.flush()
 
 
-def we_have_a_looser():
+def we_have_a_looser(div):
     
-    print("congrats, you have the lowest points :) Go buy your mates a drink.")
+    print(div, "congrats, you have the lowest points :) Go buy your mates a drink. \n")
     # do you wish to play again func?
 
 
@@ -164,7 +164,7 @@ def start(inst, players):
         
         div = ""
         for looser in loosers:
-            div += looser.name + ", "
+            div += looser.name + ","
         
-        print(div , we_have_a_looser())   
+        we_have_a_looser(div)
         
