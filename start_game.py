@@ -24,6 +24,7 @@ def roll_cheating_dice():
     faces = [1, 2, 3, 3, 4, 5, 6]
     random.shuffle(faces)
     pips = faces[0]
+    print("Dice was: ", pips)
     return(pips)
     
 
@@ -48,7 +49,7 @@ def animation():
 def we_have_a_looser(div):
     
     print(div + "congrats, you have the lowest points :) Go buy your mates a drink.", "\n" * 3)
-    time.sleep(3)
+    time.sleep(4.2)
     # do you wish to play again func?
 
 
@@ -93,7 +94,6 @@ def state_check(sum, player, inst):
         we_have_a_looser(player.name)
         return (-100)
     else:
-        print(sum)
         return sum
    
 
