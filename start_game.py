@@ -45,9 +45,9 @@ def animation():
         sys.stdout.flush()
 
 
-def we_have_a_looser(player):
+def we_have_a_looser():
     
-    print(player.name, "Congrats, you are a Looser :) Go buy your mates a drink.", "\n")
+    print("congrats, you have the lowest points :) Go buy your mates a drink.")
     # do you wish to play again func?
 
 
@@ -59,7 +59,7 @@ def nicer_dicer_and_scorekeeper(player, inst):
         number = inst[0]
         faces = inst[1]
         seed = inst[2]
-        #animation()
+        # animation()
         sum = 0
         sum = roll_dice_int_builder(roll_dice(number, faces, seed))
         print("Dice was:", sum)  
@@ -94,7 +94,6 @@ def state_check(sum, player, inst):
     else:
         print(sum)
         return sum
-
    
 
 def start(inst, players):
@@ -156,7 +155,16 @@ def start(inst, players):
     
     if (len(possible_winners) > 0 and game_on == 1):
         winners = []
+        loosers = []
         winners = sorted(possible_winners, key=lambda x: x.score)
-        print(winners[0].name, "you have the lowest points.")
-        we_have_a_looser(winners[0])
+        person = winners[0]
+        for pers in winners:
+            if (pers.score == person.score):
+                loosers.append(pers)
+        
+        div = ""
+        for looser in loosers:
+            div += looser.name + ", "
+        
+        print(div , we_have_a_looser())   
         
