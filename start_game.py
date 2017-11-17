@@ -116,6 +116,7 @@ def start(inst, players):
                     sum += nicer_dicer_and_scorekeeper(player, inst)
                     print("Total score is:", sum)
                     a = state_check(sum, player, inst)
+                    sum = a
                     if (a == 9):
                         player.score = sum
                         possible_winners.append(player)
@@ -125,12 +126,12 @@ def start(inst, players):
                         player.score = sum
                         possible_winners.append(player)
                         break
-                    sum = a
                     continue
                 if (inp == "cheat"):
                     sum += nicer_dicer_and_scorekeeper(player, cheating_inst)
                     print("Total score is:", sum)
                     a = state_check(sum, player, inst)
+                    sum = a
                     if (a == 9):
                         player.score = sum
                         possible_winners.append(player)
@@ -140,7 +141,6 @@ def start(inst, players):
                         player.score = sum
                         possible_winners.append(player)
                         break
-                    sum = a
                     continue
                 elif (inp == "n"):
                     player.score = sum
@@ -154,7 +154,9 @@ def start(inst, players):
             print("The End - Buy our exclusive 79,99 Euro DLC \n*3")
             break
     
-    if (len(possible_winners) > 0 and game_on == 1):  
+    if (len(possible_winners) > 0 and game_on == 1):
+        print(possible_winners[0])
+        print(possible_winners[1])
         winners = []
         winners = sorted(possible_winners, key=lambda x: x.score)
         print(winners[0].name, "you have the lowest points.")
