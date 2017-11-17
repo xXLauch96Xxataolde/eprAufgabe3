@@ -27,15 +27,12 @@ def menue():
     print(".1..New Game.............................")
     print(".2..Quick Game 2 Players.................")
     print(".3..Help.................................")
-    print(".4..Configure your special/Cheating Dice.")
-    print(".5..Exit.................................")
-    print(".........................................")
+    print(".4..Exit.................................")
     print(".........................................")
 
 
 def sixteen_is_dead(players):
     while (True):
-        time.sleep(2.5)
         print("Going back to menu...")
         time.sleep(0.5)
         print("\n"*100)
@@ -54,8 +51,6 @@ def sixteen_is_dead(players):
         elif (inp == "3"):
             help()
         elif (inp == "4"):
-            conf_special()
-        elif (inp == "5"):
             print("Play again soon. Buy our PC exclusive DLC for 79,99 Euro")
             break;
         else:
