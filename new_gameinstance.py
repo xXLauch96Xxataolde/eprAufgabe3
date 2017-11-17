@@ -43,7 +43,7 @@ def game_inst():
             except (ValueError, IndexError):
                 print("Unreadable")
     elif (inp == "n"):
-        print("Ok. 1 dice, 6 faces. No seed")
+        print("Ok. 1 dice, 6 faces. No seed \n")
         number = 1
         faces = 6
         seed = None
