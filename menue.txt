@@ -28,3 +28,5 @@ between the players with the help of an unique id. In New Game now you can
 decide if there should be anything special inside the game, like special dices 
 or seed, as mentioned above. 
 
+
+Press <Enter> to escape the help file. 

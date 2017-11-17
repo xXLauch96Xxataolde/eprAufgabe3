@@ -12,8 +12,8 @@ import new_gameinstance
 import start_game
 import quick_game
 import time
-import os
- 
+import help_menue
+
 __author__ = "123456: John Cleese, 654321: Terry Gilliam"  # put your data here
 __copyright__ = "Copyright 2017/2018 - EPR-Goethe-Uni" 
 __credits__ = "If you would like to thank somebody \
@@ -49,7 +49,8 @@ def sixteen_is_dead(players):
            inst = quick_game.std_dice()
            start_game.start(inst, players)
         elif (inp == "3"):
-            help()
+            help_menue.helpings()  # time.sleep mhhmmmm
+            inp = input()
         elif (inp == "4"):
             print("Play again soon. Buy our PC exclusive DLC for 79,99 Euro")
             break;
