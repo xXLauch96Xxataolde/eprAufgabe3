@@ -1,6 +1,9 @@
 """Main or Core Function 
 
 This function handles the whole program
+During the whole dev process of the code, we always kept an eye on naming 
+the variables, datatypes, objects and so on very descriptive so the code is
+easily to service and to understand. 
 """
 
 import random
@@ -20,6 +23,7 @@ __email__ = "uni.goethe.horde@gmail.com"
   
 def menue():
     """Just a small procedure for printing a overview of game funcs."""
+    
     print(".................Menu....................")
     print(".........................................")
     print(".1..New Game.............................")
@@ -41,6 +45,7 @@ def sixteen_is_dead(players):
     with configured dices, faces of dices, and seeds. 
     start_game.start(inst, players) start the game
     """
+    
     while (True):
         print("Going back to menu...")
         time.sleep(0.5)
@@ -69,6 +74,7 @@ def sixteen_is_dead(players):
     
 def main():
     """Starts everything."""
+    
     players = []
     sixteen_is_dead(players)
 
