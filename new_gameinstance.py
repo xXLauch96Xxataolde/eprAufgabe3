@@ -35,10 +35,12 @@ def game_inst():
                 if (0 < inp and inp < 11):
                     print("Great")
                     number = inp
-                else:
+                elif (inp < 1):
+                    print("Not enough. Repeat")
+                    continue
+                elif (inp > 10):
                     print("Too many dices. Repeat")
                     continue
-
                 print("How many faces per Dice? Faces between 2 and 100.")
                 inp = int(input())
                 if (inp == "exit"):
@@ -65,7 +67,7 @@ def game_inst():
             except (ValueError, IndexError):
                 print("Unreadable")
     elif (inp == "n"):
-        print("Ok. 1 dice, 6 faces. No seed \n")
+        print("Ok. 1 dice, 6 faces. No seed. \n")
         number = 1
         faces = 6
         seed = None

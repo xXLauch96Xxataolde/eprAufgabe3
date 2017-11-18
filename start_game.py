@@ -179,7 +179,7 @@ def start(inst, players):
         if (game_on == 1):
             print(player.name,
                   "it's your turn. Press <enter> to gamble")
-            print("Press <n> to end your round.")
+            print("Press <n> to end your round. To exit or restart type 'exit' or 'restart'.")
             while(True):
                 inp = input()
                 if (inp == ""):
