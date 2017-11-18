@@ -4,24 +4,25 @@ at first let us thank you for testing our little game. We hope it brings joy to
 you and your mates. Our program offers a variety of possibilities to determine 
 who is the next to buy a round of your fav drink.
 
+First of all: 
 In the menue you have the overview of most of the game modes we offer.
  
 Menue 1. Starts a game of your choice. You have all the possibilities to 
 configure the number of dices, the faces per dice or the seed, if you want to 
 test our game or just mess with the algorithm.
 
-Menue 2. Here you have the quick game option for you and your best mate. This is 
-just a standard game, with one dice, with 6 faces and a standard seed for the 
-random method. Due to the standard seed, the random method operates per system 
-time. 
+Menue 2. Here you have the quick game option for you and your mate of choice. 
+This is just a standard game, with one dice, with 6 faces and a standard seed 
+for the random method. Due to the standard seed, the random method operates via 
+system time. 
 
 Menue 3. Offers you help and a little detail about the game and its 
-configurations. 
+configurations. This is where you are right now.
 
 Menue 4. Exit. Astonishingly the exit point exits the program. Sadly, but 
-everything ends even this masterpiece of fine coding.
+everything ends, even this masterpiece of fine coding.
 
-Lets dive into the mechanics during a game. There is just a littler difference 
+Lets dive into the mechanics during a game. There is just a little difference 
 whether you play in New Game or Quick Game. 
 In New Game, after you chose the number of mates you want to play with you can 
 enter a dedicated name for them. You are allowed every word, but it has to be 
@@ -30,8 +31,28 @@ with the same name. Internally the datastructure allows a discrete distinction
 between the players with the help of an unique id. In New Game now you can 
 decide if there should be anything special inside the game, like special dices 
 or seed, as mentioned above. 
+Then after everything is set, Player 1 can try his luck and role a dice by 
+pressing enter. The number is shown. The Player 1 can end his round any time by
+pressing n, if he has not encountered a score of 9 or above 15. If he 
+scores a total of 10 points, the program forces to role a dice, which pips then
+are added to 10. After the round of Player 1 has ended, due to 9, 16 or higher 
+or by pressing n for next round, the next Player can try his luck, and to avoid
+buying his mates a round of drinks. After all rounds are ended, the looser or
+the losers is/are printed out, and then the menue is shown again, for another 
+round or for exiting the game. 
+In every game it is possible to end it immediately or to restart the game, by
+typing "exit" or "restart".
+Furthermore, there is a hidden feature. The Player who wants to help his luck
+can write "cheat" instead of press enter for his next dice shuffle. This offers
+a special dice with a probability of 28% for a 3 and 14% for a number from 1-6,
+except 3. But caution: Cheating this obviously may cause a quarrel between you
+and your mates. You better watch out!
 
-hopfully stongly builf bla bla
-cheat
-exit 
+Hopefully the devs of this code build the inputs strong enough to deal with 
+every possible entry throughout the game. Every time something unexpected or
+not understable is input(ed?) the program gives a tipp. 
+
+We wish you hours of fun with our game, thank you for your attention,
+have a great day.
+
 Press any key to escape this help file. 
