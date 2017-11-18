@@ -48,8 +48,11 @@ def game_inst():
                 if (1 < inp and inp < 101):
                     print("Great")
                     faces = inp
-                else:
-                    print("Too many faces. Repeat")
+                elif (inp < 1):
+                    print("Not enough. Repeat")
+                    continue
+                elif (inp > 10):
+                    print("Too many dices. Repeat")
                     continue
                 print("Do you want a seed? (y/n)")
                 inp = input()
