@@ -55,7 +55,5 @@ not understandable  is input(ed?) the program gives an indication.
 We wish you hours of fun with our game, thank you for your attention,
 have a great day.
 
-Press any key to exit the help file
+Press any key to exit the help file,
 have a great day.
-
-Press any key to exit the help file
