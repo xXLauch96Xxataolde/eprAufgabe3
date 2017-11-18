@@ -22,10 +22,14 @@ def game_inst():
     seed = 0.0
     print("Do you wish to configure your own dice(s). (y/n)")
     inp = input()
+    if (inp == "exit"):
+        return ("exit")
     if (inp == "y"):
         while (True):
             print("Great. How many dices? 1-10 are possible")
             inp = input()
+            if (inp == "exit"):
+                return ("exit")
             try:
                 inp = int(inp)
                 if (0 < inp and inp < 11):
@@ -37,6 +41,8 @@ def game_inst():
 
                 print("How many faces per Dice? Faces between 2 and 100.")
                 inp = int(input())
+                if (inp == "exit"):
+                    return ("exit")
                 if (1 < inp and inp < 101):
                     print("Great")
                     faces = inp
@@ -45,6 +51,8 @@ def game_inst():
                     continue
                 print("Do you want a seed? (y/n)")
                 inp = input()
+                if (inp == "exit"):
+                    return ("exit")
                 if (inp == "y"):
                     print("Which seed for pseudo random? Float expected")
                     inp = float(input())

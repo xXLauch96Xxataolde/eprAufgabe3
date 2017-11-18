@@ -80,7 +80,7 @@ def we_have_a_looser(div):
     an app for mobile 16 is dead. 
     """
     
-    print(div + "congrats, you have the lowest points :) \
+    print(div + " congrats, you have the lowest points :) \
         Go buy your mates a drink.", "\n" * 3)
     time.sleep(4.2)  # 420 lol
     # do you wish to play again func
@@ -168,7 +168,6 @@ def start(inst, players):
     All funcs and procedures used here are explained in the the docstrings above
     so we avoid the redundancy. 
     """
-    
     number = inst[0]
     faces = inst[1]
     seed = inst[2]
@@ -225,8 +224,9 @@ def start(inst, players):
                 elif (inp == "restart"):
                     print("Restarting game.")
                     possible_winners = []
-                    start(inst, players)
-                    break
+
+                    return (start(inst, players))
+
                 else:
                     # the code doesnt delete inp the way i want it,
                     # so as the loop continues, else is called

@@ -21,6 +21,8 @@ def new_players(players):
     while (True):
         print("Please enter the number of participants")
         inp = input()
+        if (inp == "exit"):
+            return "exit"
         try:
             inp = int(inp)
             if (inp > 1):
@@ -37,6 +39,8 @@ def new_players(players):
         print("Please enter a Name for Player", i + 1)
         while True:
             inp = input()
+            if (inp == "exit"):
+                return "exit"
             inp = inp.strip()
             if (inp != ""):  # there was a more elegant way
                 players.append(Player(inp, score=0, id=i))

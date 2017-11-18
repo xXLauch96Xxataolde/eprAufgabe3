@@ -55,7 +55,11 @@ def sixteen_is_dead(players):
         inp = input()
         if (inp == "1"):
             players = new_players.new_players(players)
+            if (players == "exit"):
+                continue
             inst = new_gameinstance.game_inst()
+            if (inst == "exit"):
+                continue
             start_game.start(inst, players)
         elif (inp == "2"):
             # print("category choosen" insert
