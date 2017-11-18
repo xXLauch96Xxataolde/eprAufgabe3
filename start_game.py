@@ -80,8 +80,8 @@ def we_have_a_looser(div):
     an app for mobile 16 is dead. 
     """
     
-    print(div + " congrats, you have the lowest points :) \
-        Go buy your mates a drink.", "\n" * 3)
+    print(div + " congrats, you have the lowest points :)")
+    print("Go buy your mates a drink.", "\n" * 3)
     time.sleep(4.2)  # 420 lol
     # do you wish to play again func
 
