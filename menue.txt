@@ -56,3 +56,6 @@ We wish you hours of fun with our game, thank you for your attention,
 have a great day.
 
 Press any key to exit the help file
+have a great day.
+
+Press any key to go to exit the help file
