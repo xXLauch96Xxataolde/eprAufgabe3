@@ -27,7 +27,7 @@ whether you play in New Game or Quick Game.
 In New Game, after you chose the number of mates you want to play with you can 
 enter a dedicated name for them. You are allowed every word, but it has to be 
 at least one char. Further it is totally possible to have two of your mates 
-with the same name. Internally the datastructure allows a discrete distinction 
+with the same name. Internally the data structure allows a discrete distinction 
 between the players with the help of an unique id. In New Game now you can 
 decide if there should be anything special inside the game, like special dices 
 or seed, as mentioned above. 
@@ -48,17 +48,9 @@ a special dice with a probability of 28% for a 3 and 14% for a number from 1-6,
 except 3. But caution: Cheating this obviously may cause a quarrel between you
 and your mates. You better watch out!
 
-<<<<<<< HEAD
 Hopefully the devs of this code build the inputs strong enough to deal with 
 every possible entry throughout the game. Every time something unexpected or
-not understable is input(ed?) the program gives a tipp. 
+not understandable  is input(ed?) the program gives an indication. 
 
 We wish you hours of fun with our game, thank you for your attention,
 have a great day.
-
-=======
-hopfully stongly builf bla bla
-cheat
-exit 
->>>>>>> branch 'master' of https://github.com/xXLauch96Xxataolde/eprAufgabe3.git
-Press any key to escape this help file. 
