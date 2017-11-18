@@ -40,8 +40,8 @@ or by pressing n for next round, the next Player can try his luck, and to avoid
 buying his mates a round of drinks. After all rounds are ended, the looser or
 the losers is/are printed out, and then the menue is shown again, for another 
 round or for exiting the game. 
-In every game it is possible to end it immediately or to restart the game, by
-typing "exit" or "restart".
+In every game it is possible to end it immediately and go back to menue or to
+restart the game, by typing "exit" or "restart".
 Furthermore, there is a hidden feature. The Player who wants to help his luck
 can write "cheat" instead of press enter for his next dice shuffle. This offers
 a special dice with a probability of 28% for a 3 and 14% for a number from 1-6,
