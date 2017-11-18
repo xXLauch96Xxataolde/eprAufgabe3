@@ -233,6 +233,7 @@ def start(inst, players):
                     print("Unreadable. Again press <enter> or <n>.")
         else:
             print("The End - Buy our exclusive 79,99 Euro DLC \n")
+            time.sleep(2)
             break
         
     """The code below, organizes the losers in a list."""
