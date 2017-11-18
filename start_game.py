@@ -37,7 +37,7 @@ def roll_cheating_dice():
     cheat into the console. The probabilties are around 14% for every number 
     (1-6) except 3 which has 28% as demanded in the scope.
     """
-    
+    animation()
     faces = [1, 2, 3, 3, 4, 5, 6]
     random.shuffle(faces)
     pips = faces[0]
@@ -141,10 +141,11 @@ def state_check(sum, player, inst):
         return (9)
     elif (sum == 10):
         seconds_rule()
-        sum += roll_dice_int_builder(roll_dice(number, faces, seed))
+        pips = roll_dice_int_builder(roll_dice(number, faces, seed))
+        sum += pips
+        print("Dice was: ", pips)
         print("Total score is:", sum)
         state_check(sum, player, inst)
-        return(sum)
     elif (sum > 15):
         we_have_a_looser(player.name)
         return (-100)
