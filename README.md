@@ -5,7 +5,7 @@ What my great code misses:
 ok roll_cheating_dice
 ok complete game loop, to only exit with exit method
 ok whats with the 3 seconds thing
-- what about test cases
+ok what about test cases
 ok overhauled menue
 ok in configure your game thing: ask if seed is wanted
 ok place docstrings and comments everywhere in the code
@@ -17,7 +17,8 @@ ok if cheat is enterd cheat
 ok jede methode beginnt mit docstring
 ok schaue konventionen an
 ok prozeduren mit camel case
-?? leerzeilen zwischen def func() und dem restlichen code mist, wenn es kein docstring ist
+?? leerzeilen zwischen def func() und dem restlichen code mist, 
+wenn es kein docstring ist
 - def func():
 	"""
 	
