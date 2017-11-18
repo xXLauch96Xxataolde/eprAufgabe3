@@ -1,8 +1,22 @@
+"""Game Instance 
+
+This function returns a specially configured game instance. This is for the
+core game mechanics. Dices, Faces and Seeds can be configured as the user wants
+it. 
+"""
+
 import main
 from player import Player
 
+__author__ = "6770541: Niels Heissel, 6785468: Robert am Wege"
+__copyright__ = "Copyright 2017/2018 - EPR-Goethe-Uni" 
+__credits__ = "" 
+__email__ = "uni.goethe.horde@gmail.com" 
+
 
 def game_inst():
+    """As written above this returns a game instance."""
+    
     number = 0
     faces = 0
     seed = 0.0
@@ -31,7 +45,7 @@ def game_inst():
                     continue
                 print("Do you want a seed? (y/n)")
                 inp = input()
-                if (inp =="y"):
+                if (inp == "y"):
                     print("Which seed for pseudo random? Float expected")
                     inp = float(input())
                     seed = inp

@@ -31,5 +31,7 @@ between the players with the help of an unique id. In New Game now you can
 decide if there should be anything special inside the game, like special dices 
 or seed, as mentioned above. 
 
-
+hopfully stongly builf bla bla
+cheat
+exit 
 Press any key to escape this help file. 

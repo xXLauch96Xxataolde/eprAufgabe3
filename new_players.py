@@ -1,7 +1,21 @@
+"""New Player 
+
+Here the code generates the dialogue for building a new player object which is 
+done in the Player class. We paid attention to some sensibility, e.g. since
+a game of 16 is dead would be useless to play alone, we ask the user to enter
+at least 2 players. Wrong inputs are caught.
+"""
+
 from player import Player
 
+__author__ = "6770541: Niels Heissel, 6785468: Robert am Wege"
+__copyright__ = "Copyright 2017/2018 - EPR-Goethe-Uni" 
+__credits__ = "" 
+__email__ = "uni.goethe.horde@gmail.com" 
 
-def new_players(players):  # good job
+def new_players(players):
+    """Gathers the information for new player objects."""
+    
     players = []
     print("Category chosen: New Game")    
     while (True):
@@ -24,7 +38,7 @@ def new_players(players):  # good job
         while True:
             inp = input()
             inp = inp.strip()
-            if (inp != ""): #there was a more elegant way
+            if (inp != ""):  # there was a more elegant way
                 players.append(Player(inp, score=0, id=i))
                 break
             else:
