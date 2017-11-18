@@ -48,6 +48,7 @@ a special dice with a probability of 28% for a 3 and 14% for a number from 1-6,
 except 3. But caution: Cheating this obviously may cause a quarrel between you
 and your mates. You better watch out!
 
+<<<<<<< HEAD
 Hopefully the devs of this code build the inputs strong enough to deal with 
 every possible entry throughout the game. Every time something unexpected or
 not understable is input(ed?) the program gives a tipp. 
@@ -55,4 +56,9 @@ not understable is input(ed?) the program gives a tipp.
 We wish you hours of fun with our game, thank you for your attention,
 have a great day.
 
+=======
+hopfully stongly builf bla bla
+cheat
+exit 
+>>>>>>> branch 'master' of https://github.com/xXLauch96Xxataolde/eprAufgabe3.git
 Press any key to escape this help file. 
