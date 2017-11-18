@@ -48,10 +48,10 @@ def game_inst():
                 if (1 < inp and inp < 101):
                     print("Great")
                     faces = inp
-                elif (inp < 1):
+                elif (inp < 2):
                     print("Not enough. Repeat")
                     continue
-                elif (inp > 10):
+                elif (inp > 100):
                     print("Too many dices. Repeat")
                     continue
                 print("Do you want a seed? (y/n)")
@@ -60,8 +60,10 @@ def game_inst():
                     return ("exit")
                 if (inp == "y"):
                     print("Which seed for pseudo random? Float expected")
-                    inp = float(input())
-                    seed = inp
+                    inp = input()
+                    if (inp == "exit"):
+                        return ("exit")
+                    seed = float(inp)
                     return (number, faces, seed)
                 else:
                     print("Standard Seed=None it is")
